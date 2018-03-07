@@ -1,19 +1,19 @@
-#!/bin/bash
+#/bin/bash
 
-SCRIPTNAME=scenario4.sh
+scriptname=scenario4.sh
 
 csv_file="https://raw.githubusercontent.com/bryangruneberg/gsm-assessment-data/master/kafka.csv"
 csv_file_name=".kafka.csv"
 csv_dir="csv_data"
 log_file="scenario4.log"
-html_file=output.html
+html_file="output.html"
 
 if [ ! -d $csv_dir ];then
   mkdir -p $csv_dir
 fi
 
 function usage() {
-    echo "Usage: $SCRIPTNAME <OPTIONS>" 
+    echo "Usage: $scriptname <OPTIONS>" 
     echo "Script to download the kafka.csv file and create a html file with images referenced."
     echo
     echo "-r Download the data and create the html file."
@@ -88,6 +88,8 @@ if [ "x$run" == "xtrue" ];then
   create_html_file
   status_code=$?
   handle_status_code $status_code "Problem creating html file', exiting..."
+
+  echo -e "\n###### YAY! the process finished well, open the file $html_file with the browser to see the final result. ########"
 else
   usage;
 fi
