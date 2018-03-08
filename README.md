@@ -7,7 +7,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-The script provided is ready to work in Mac and Linux (ubuntu/redhat).
+The script provided is ready to work in Mac and Linux (Ubuntu/Redhat).
 
 To install the needed dependencies follow these instructions:
 
@@ -47,6 +47,7 @@ bash amazee_scenario4.sh -r
 ```
 
 Step 3: Final result
+
 To check the final result just open the generated file named "output.html" with your browser.
 
 ## Issues
